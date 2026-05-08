@@ -1,0 +1,8 @@
+category,evaluation_setting,source
+Models,OPT-13B on 1 GPU; OPT-66B on 4 GPUs; OPT-175B on 8 GPUs,draft_report_configuration
+Workloads,Tokenized ShareGPT and Alpaca traces with Poisson request arrivals,draft_report_configuration
+System under test,PagedKV serving engine with block-based KV-cache allocation and prefix sharing,draft_report_configuration
+Baselines,FasterTransformer-like contiguous allocation; Orca(Oracle); Orca(Pow2); Orca(Max),draft_report_configuration
+Metrics,Normalized latency; sustainable request rate; concurrent active requests; memory saving; KV-cache waste; kernel overhead,draft_report_configuration
+Decoding modes,Basic sampling; parallel sampling; beam search; shared-prefix serving,draft_report_configuration
+Block sizes,"Default block size 16 tokens; ablation over 8, 16, 32, 64, and 128 tokens",draft_report_configuration

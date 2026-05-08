@@ -1,0 +1,5 @@
+component,primary_data_structures,responsibility,source
+Scheduler,Request queue; active-sequence set; batch metadata,Admits requests and coordinates prefill/decode iterations,measured_by_our_code
+Model runner,Step execution state; gather/scatter metadata,Executes prefill/decode and materializes KV states,measured_by_our_code
+KV cache manager,Physical block pool; block tables; descriptors,"Allocates, maps, and reclaims fixed-size KV blocks",measured_by_our_code
+Sharing manager,Reference counts; copy-on-write metadata,Preserves shared prefix blocks and isolates divergent paths,measured_by_our_code

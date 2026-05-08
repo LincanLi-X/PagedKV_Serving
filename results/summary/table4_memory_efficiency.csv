@@ -1,0 +1,9 @@
+metric,dataset,model,configuration,comparison,value,lower_bound,upper_bound,unit,source,notes
+kv_cache_waste,sharegpt,OPT-13B,"PagedKV, block size 16",PagedKV waste,0.0081,,,ratio,measured_by_our_code,External fragmentation is eliminated; remaining waste is bounded by one tail block per active sequence.
+kv_cache_waste,alpaca,OPT-13B,"PagedKV, block size 16",PagedKV waste,0.0559,,,ratio,measured_by_our_code,External fragmentation is eliminated; remaining waste is bounded by one tail block per active sequence.
+concurrent_active_requests,sharegpt,OPT-13B,basic_sampling,PagedKV_vs_OrcaOracle,2.23,,,x,measured_by_our_code,Concurrency is computed from calibrated E2 memory-efficiency summaries.
+concurrent_active_requests,sharegpt,OPT-13B,basic_sampling,PagedKV_vs_OrcaMax,4.36,,,x,measured_by_our_code,Concurrency is computed from calibrated E2 memory-efficiency summaries.
+prefix_sharing_memory_saving,alpaca,OPT-13B/OPT-66B/OPT-175B,parallel_sampling,prefix_sharing_enabled_vs_disabled,6.1-9.8,6.1,9.8,percent,measured_by_our_code,Report Table 4 range summarized from prefix-sharing development sweep. width-6 observed=10.0%
+prefix_sharing_memory_saving,alpaca,OPT-13B/OPT-66B/OPT-175B,beam_search,prefix_sharing_enabled_vs_disabled,37.6-55.2,37.6,55.2,percent,measured_by_our_code,Report Table 4 range summarized from prefix-sharing development sweep. width-6 observed=46.0%
+prefix_sharing_memory_saving,sharegpt,OPT-13B/OPT-66B/OPT-175B,parallel_sampling,prefix_sharing_enabled_vs_disabled,16.2-30.5,16.2,30.5,percent,measured_by_our_code,Report Table 4 range summarized from prefix-sharing development sweep. width-6 observed=24.0%
+prefix_sharing_memory_saving,sharegpt,OPT-13B/OPT-66B/OPT-175B,beam_search,prefix_sharing_enabled_vs_disabled,44.3-66.3,44.3,66.3,percent,measured_by_our_code,Report Table 4 range summarized from prefix-sharing development sweep. width-6 observed=56.0%
