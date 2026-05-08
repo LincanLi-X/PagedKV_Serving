@@ -1,0 +1,5 @@
+experiment: e3_workload_sensitivity
+datasets: [sharegpt, alpaca]
+block_size: 16
+baselines: [pagedkv, orca_oracle, orca_max]
+source: measured_by_our_code

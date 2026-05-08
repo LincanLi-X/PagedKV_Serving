@@ -1,0 +1,6 @@
+experiment: e4_prefix_sharing
+datasets: [sharegpt, alpaca]
+decoding_modes: [basic_sampling, parallel_sampling, beam_search, shared_prefix_serving]
+widths: [1, 2, 4, 6]
+block_size: 16
+source: measured_by_our_code

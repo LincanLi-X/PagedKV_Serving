@@ -1,0 +1,7 @@
+experiment: e1_throughput
+dataset: sharegpt
+trace: experiments/workloads/sharegpt_trace.jsonl
+block_size: 16
+request_rates: [1, 2, 4, 8]
+baselines: [pagedkv, orca_oracle, orca_pow2, orca_max, fastertransformer_like]
+source: measured_by_our_code
