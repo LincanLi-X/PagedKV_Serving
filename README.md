@@ -29,10 +29,10 @@ PagedKV_Serving/
 │   ├── plot_figures.py           # Figure generation
 │   ├── report_table4.py          # Report-facing Table 4 builder
 │   └── summarize_results.py      # Raw JSONL to summary CSV and manifest
-├── results/                      # Our experimental artifacts
+├── results/                      # Our experimental results
 │   ├── raw/                      # Per-request JSONL logs
-│   ├── summary/                  # CSV tables and aggregated metrics
-│   └── figures/                  # Results figures
+│   ├── summary/                  # Experimental results .csv tables and metrics
+│   └── figures/                  # Experimental results figure plots
 ├── tests/
 │   ├── test_paged_kv_cache.py
 │   ├── test_prefix_cache.py
